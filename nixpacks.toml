@@ -1,0 +1,15 @@
+[phases.setup]
+nixPkgs = ["nodejs", "coreutils"]
+
+[phases.install]
+cmds = [
+  "npm ci"
+]
+
+[phases.build]
+cmds = [
+  "npm run build"
+]
+
+[phases.start]
+cmd = "npx serve -s dist"
